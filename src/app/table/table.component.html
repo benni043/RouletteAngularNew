@@ -1,0 +1,37 @@
+<div id="center">
+
+  <div class="flexBox" id="zero">
+    <span class="span">0</span>
+  </div>
+
+  <div id="middle">
+    <div id="innerNumBlock">
+      <span class="span" *ngFor="let elem of fieldFlex1Nums; index as i" [ngClass]="{'red': fieldFlex1NumsBools[i], 'black': !fieldFlex1NumsBools[i]}">
+        <span class="test">
+          <span class="elem">{{elem}}</span>
+          <span class="invisible2Horizontal"></span>
+          <span class="invisible2Vert"></span>
+        </span>
+      </span>
+      <span class="span" *ngFor="let elem of fieldFlex2Nums; index as i" [ngClass]="{'red': fieldFlex2NumsBools[i], 'black': !fieldFlex2NumsBools[i]}">
+        <span class="elem">{{elem}}</span>
+      </span>
+      <span class="span" *ngFor="let elem of fieldFlex3Nums; index as i" [ngClass]="{'red': fieldFlex3NumsBools[i], 'black': !fieldFlex3NumsBools[i]}">
+        <span class="elem">{{elem}}</span>
+      </span>
+    </div>
+
+    <div class="flexBox" id="firstOutRow">
+      <span class="span" *ngFor="let elem of fieldFlex4Nums">{{elem}}</span>
+    </div>
+
+    <div class="flexBox" id="secondOutRow">
+      <span class="span" *ngFor="let elem of fieldFlex5Nums" [ngClass]="{'red': elem === 'RED', 'black': elem === 'BLACK'}">{{elem}}</span>
+    </div>
+  </div>
+
+  <div class="flexBox" id="outColumn">
+    <span class="span" *ngFor="let elem of fieldFlex4Nums">{{elem}}</span>
+  </div>
+
+</div>
